@@ -1,0 +1,68 @@
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.carousel {
+    scroll-behavior: smooth;
+    padding: 10px;
+}
+
+.carousel-card {
+    display: none;
+}
+
+.carousel-card.active {
+    opacity: 1;
+    display: block;
+}
+
+.scroll-button {
+    background-color: var(--color-border-light);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.scroll-button:hover {
+    background-color: var(--color-primary-hover);
+}
+
+body.dark .scroll-button {
+    background-color: var(--color-primary-scroll-dark);
+}
+
+body.dark .scroll-button:hover {
+    background-color: var(--color-primary-scroll-dark-hover);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .carousel-card {
+        transition: opacity 0.5s ease-in-out;
+    }
+}
+
+@media (max-width: 48rem) {
+    .card-container {
+        gap: 0.5rem;
+    }
+
+    .carousel {
+        padding-right: 25px;
+    }
+
+    .card {
+        width: 100%;
+        min-width: 180px;
+        height: auto;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+}

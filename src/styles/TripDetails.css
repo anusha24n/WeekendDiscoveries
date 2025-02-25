@@ -1,0 +1,82 @@
+.trip-details {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.trip-details h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 16px;
+
+}
+
+.trip-details img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.trip-details p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.trip-details strong {
+    color: #333;
+}
+
+body.dark .trip-details h1,
+body.dark .trip-details p,
+body.dark .trip-details strong {
+    color: var(--color-text-dark);
+}
+
+.trip-details button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.trip-details button:hover {
+    background-color: #0056b3;
+}
+
+body.dark .trip-details {
+    background: var(--color-card-background-dark);
+    border: 1px solid var(--color-border-dark);
+    color: var(--color-text-dark);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .trip-details button {
+        transition: background-color 0.3s;
+    }
+
+}
+
+@media (max-width: 48rem) {
+    .trip-details {
+        padding: 1rem;
+    }
+
+    .trip-details h1 {
+        font-size: 1.5rem;
+    }
+
+    .trip-details p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,125 @@
+.container {
+    padding: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, var(--color-hero-gradient-1-light), var(--color-hero-gradient-2-light));
+    color: var(--color-border-dark);
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .hero {
+    background: linear-gradient(135deg, var(--color-hero-gradient-1-dark), var(--color-hero-gradient-2-dark));
+    color: var(--color-text-dark);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--color-border-dark);
+}
+
+body.dark .hero p {
+    color: var(--color-text-dark);
+}
+
+.two-column-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.travel-blogs,
+.seasonal-picks {
+    flex: 1;
+}
+
+.blog-cards,
+.seasonal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.blog-card,
+.seasonal-card {
+    background: var(--color-card-background-light);
+    border: 1px solid var(--color-border-light);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .blog-card,
+body.dark .seasonal-card {
+    background: var(--color-card-background-dark);
+    border: 1px solid var(--color-border-dark);
+}
+
+
+.blog-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.external-link {
+    color: var(--color-primary-scroll-dark);
+}
+
+body.dark .external-link {
+    color: var(--color-primary);
+}
+
+.tips-highlights {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--color-card-background-light);
+    border-radius: 8px;
+    border: 1px solid var(--color-border-light);
+}
+
+.tips-highlights ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+}
+
+body.dark .tips-highlights {
+    background: var(--color-card-background-dark);
+    border: 1px solid var(--color-border-dark);
+}
+
+@media (max-width: 48rem) {
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .two-column-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .blog-card,
+    .seasonal-card {
+        padding: 0.8rem;
+    }
+}

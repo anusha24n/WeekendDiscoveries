@@ -1,0 +1,23 @@
+.aboutus h1 {
+    text-align: center;
+}
+
+.aboutus_panel {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--color-about-us-panel);
+    border-radius: 0.5rem;
+    border: 0.063rem solid #ddd;
+    margin-bottom: 3rem;
+}
+
+body.dark .aboutus_panel {
+    background: var(--color-about-us-panel-dark);
+}
+
+@media (max-width: 48rem) {
+    .aboutus_panel {
+        padding: 1rem;
+        margin-top: 1.5rem;
+    }
+}

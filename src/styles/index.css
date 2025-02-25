@@ -1,0 +1,252 @@
+:root {
+  --color-background-light: #ffffff;
+  --color-text-light: #213547;
+  --color-background-dark: #161616;
+  --color-text-dark: #e0e0e0;
+  --color-primary: #4a90e2;
+  --color-primary-hover: #4a90e2;
+  --color-primary-scroll-dark: #1c4574;
+  --color-primary-scroll-dark-hover: #3278c9;
+  --color-card-background-light: #f9f9f9;
+  --color-card-background-dark: #1e1e1e;
+  --color-border-light: #ddd;
+  --color-border-dark: #333;
+  --color-primary-hover-dark: #ff6f61;
+  --color-navbar-menu-light: #213547;
+  --color-navbar-menu-dark: #e0e0e0;
+  --color-hero-gradient-1-light: #4a90e2;
+  --color-hero-gradient-2-light: #ff6f61;
+  --color-hero-gradient-1-dark: #1b3551;
+  --color-hero-gradient-2-dark: #502421;
+  --color-skip-link-light: #007bff;
+  --color-skip-link-dark: #003368;
+  --color-about-us-panel: #f3f3f3;
+  --color-about-us-panel-dark: #242424;
+}
+
+main {
+  padding-top: 65px;
+}
+
+body {
+  font-family: Avenir, system-ui, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #213547;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+a {
+  font-weight: bold;
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff6f61;
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  color: #333333;
+  margin: 0 0 1rem;
+  font-weight: bold;
+}
+
+p {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: #555555;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-skip-link-light);
+  color: white;
+  padding: 8px 16px;
+  z-index: 200;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+body.dark .skip-link {
+  background: var(--color-skip-link-dark);
+}
+
+.skip-link:focus {
+  top: 10px;
+  transform: translateX(-50%);
+}
+
+.theme-modal {
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 300px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.theme-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.theme-form h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.theme-form label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #213547;
+}
+
+.theme-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+.theme-buttons button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.theme-buttons button:first-child {
+  background: #ccc;
+  color: #364f57;
+}
+
+.theme-buttons button:last-child {
+  background: #007bff;
+  color: #fff;
+}
+
+body.light {
+  background-color: var(--color-background-light);
+  color: var(--color-text-light);
+}
+
+body.dark {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-dark);
+}
+
+a {
+  font-weight: bold;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  color: inherit;
+}
+
+p {
+  color: inherit;
+}
+
+.theme-modal,
+.modal {
+  background-color: var(--color-background-light);
+  color: var(--color-text-light);
+}
+
+body.dark .theme-modal,
+body.dark .theme-modal label,
+body.dark .modal {
+  background-color: rgba(43, 41, 58, 0.98);
+  color: var(--color-text-dark);
+}
+
+button {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+body.dark button {
+  background-color: var(--color-primary-hover);
+  color: #fff;
+}
+
+body.dark button:hover {
+  background-color: var(--color-primary);
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .skip-link {
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+}
+
+@media (max-width: 48rem) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+
+  .skip-link {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
